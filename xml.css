@@ -1,0 +1,43 @@
+centres{
+    margin: 0px;
+    background-color: #f2f6ff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+heading{
+    background-image: linear-gradient(to top,#3989ebee,#3399FF);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 20px;
+    display: block;
+    width: 100%;
+}
+
+centre{
+    width: 30%;
+    height: 180px;
+    margin: 20px 1%;
+    background-color: white;
+    display: inline-block;
+    border-radius: 20px;
+    word-spacing: 2px;
+}
+
+name, address, phone{
+    margin: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+name::before{
+    content: 'Name: ' ;
+}
+address::before{
+    content: 'Address: ';
+}
+phone::before{
+    content: 'Helpline: ';
+}

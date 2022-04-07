@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>PlasmaBank</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/form.css">
+  </head>
+  <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="web-name" href="index.html">D&#128151;nating Plasma</a></li>
+                <li><a id="home" class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="plasmaDonation.html">Plasma Donation</a></li>
+                <li><a class="active-page nav-link" href="form.html">Registration Form</a></li>
+                <li><a class="nav-link" href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="main"></div>
+    </main>
+    <footer>
+        <div style="margin-top: 80px;" id="footer">
+            <p>Project by Dhruv Solanki</p>
+        </div>
+    </footer>
+    <script type="text/babel">
+        const { useState } = React
+
+        var isMin = (value, limit=18) => value >= limit;
+
+        const FormDiv = () => {
+            const [age, handleAge] = useState("");
+            const [weight, handleWeight] = useState("");
+            return (
+            <div>
+                <p>Please fill in this form to check whether your are eligible or not.</p>
+                
+                <label htmlFor="age"><strong>Age</strong></label>
+                <input type="number" onChange={(e) => handleAge(e.target.value)} value={age} placeholder="Enter your Age" id="age" />
+
+                <label htmlFor="weight"><strong>Weight</strong></label>
+                <input type="number" onChange={e => handleWeight(e.target.value)} value={weight} placeholder="Enter your Weight" id="weight" />
+                <hr />
+                <h2>Results</h2>
+                <h4>{(age != "" && weight != "") ? 
+                    (isMin(age) && isMin(weight,50)) ? "Congratulation, You are eligible for donation" : "Not eligible"
+                     : ""}</h4>
+            </div>
+            );
+        }
+
+        const backStyle = {
+            position: "relative",
+            right: "-550px",
+            top: "-60px",
+            color: "white",
+            textDecoration: "none", 
+            backgroundColor: "#1885F2", 
+            padding: "14px 15px",
+            borderRadius: "5px"
+        }
+
+        const App = () =>{
+            return (
+            <div className="container">
+                <h1>Verify your Details</h1>
+                <a style={backStyle} href="form.html"><span style={{fontSize: "25px"}}>&#8678;</span> Go Back</a>
+                <FormDiv />
+            </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('main'));
+    </script>
+  </body>
+</html>

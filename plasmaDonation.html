@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PlasmaBank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="css/plasma.css">
+    <style>
+        .btn-default {
+        color: white;
+        background-color: blue;
+        }
+        .btn-change {
+        color: Red;
+        background-color: white;
+        }
+        table, th , td  {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+        }
+        table tr:nth-child(odd) {
+        background-color: #f1f1f1;
+        }
+        table tr:nth-child(even) {
+        background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="web-name" href="index.html">D&#128151;nating Plasma</a></li>
+                <li><a id="home" class="nav-link" href="index.html">Home</a></li>
+                <li><a class="active-page nav-link" href="#">Plasma Donation</a></li>
+                <li><a class="nav-link" href="form.html">Registration Form</a></li>
+                <li><a class="nav-link" href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main" ng-app="myApp" ng-controller="usersCtrl"> 
+            <div class="flex-item">
+                <ul class="side-link">
+                    <li ng-repeat="x in names">
+                        <a href="#topic{{$index}}">{{x}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="flex-basis: 1080px" class="flex-item">
+                <div class="topic" id="topic0">
+                    <h1>What is plasma?</h1>
+                    <img src="img/plasma.jpg" alt="plasma">
+                    <p>Plasma is the clear, straw-colored liquid portion of blood that remains after red blood cells, white blood cells, platelets and other cellular components are removed. It is the single largest component of human blood, comprising about 55 percent, and contains water, salts, enzymes, antibodies and other proteins.</p>
+                    <p>Composed of 90% water, plasma is a transporting medium for cells and a variety of substances vital to the human body</p>
+                    <p>Plasma carries out a variety of functions in the body, including clotting blood, fighting diseases and other critical functions.</p>
+                    <p>Recovered plasma is collected through whole blood donation in which plasma is separated from its cellular components. Recovered plasma may be used for fractionation. </p>
+                </div>
+                <div class="topic" id="topic1">
+                    <h1>Plasma Donation</h1>
+                    <img src="img/plasmaDonation.jpg" alt="plasma">
+                    <p>Become a part of the lifesaving journey that plasma takes from a dedicated donor to the thousands of patients with rare diseases who depend on plasma protein therapies to lead healthy, productive, and fulﬁlling lives.</p>                    
+                    <p>Source plasma collection centers are also certified by the International Quality Plasma Program (IQPP), a rigorous, voluntary program that goes beyond regulatory requirements to help ensure donor safety and further improve the quality of source plasma used for fractionation.</p>
+                    <p>Source plasma is collected through a process called plasmapheresis. In more than 900 specialized donation centers located in the U.S. and Europe, individuals may donate plasma. Plasmapheresis is a sterile, self-contained, automated process that separates plasma from red blood cells and other cellular components which are then returned to the donor.</p>
+                </div>
+                <div class="topic" id="topic2">
+                    <h1>Donor Frequently Asked Questions</h1>
+                    <div ng-repeat="x in faq">
+                        <h3>{{x.ques}}</h3>
+                        <p>{{x.ans}}</p>
+                    </div>
+                </div>
+                <div class="topic" id="topic3">
+                    <h1>Plasma Donation Center</h1>
+                    <table>
+                        <tr>
+                            <th>Center Name</th>
+                            <th>Helpline Number</th>
+                        </tr>
+                        <tr ng-repeat="x in center">
+                            <td>{{ x.name }}</td>
+                            <td>{{ x.phone }}</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><a href="xmlPlasma.xml">View More</a></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+        <div id="footer">
+            <p>Project by Dhruv Solanki</p>
+        </div>
+    </footer>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('usersCtrl', function($scope) {
+            $scope.names = ["What is Plasma?", "Plasma Donation", "Donor FAQ", "Plasma Donation Center"];
+            $scope.faq = [
+                {"ques": "Who can donate?","ans": "Generally, plasma donors must be 18 years of age and weigh at least 110 pounds (50kg). All individuals must pass two separate medical examinations, a medical history screening and testing for transmissible viruses, before their donated plasma can be used to manufacture plasma protein therapies."},
+                {"ques": "How do I donate plasma?","ans": "There are more than 900 licensed and IQPP-certified plasma collection centers in the U.S., Canada, and Europe. Each company manages its operations differently within government regulatory guidelines. Locate a center near you, using our searchable directory. Call the center to find out hours of operation and to ask any other questions you may have."},
+                {"ques": "Does it hurt?","ans": "Most people compare the feeling of the needle to a mild bee sting. You will also be required to submit to a finger stick test each time you donate so the collection center medical staff can evaluate your protein and hemoglobin levels."},
+                {"ques": "Is donating plasma safe?","ans": "Yes. Plasma donation in IQPP certified collection centers is performed in a highly controlled, sterile environment by professionally trained medical staff. All plasma collection equipment is sterilized and any equipment that comes into contact with you is used only once to eliminate the possibility of transmitting viral infections."}
+            ];
+            $scope.center = [
+                {"name": "P.D. Hinduja Hospital","phone": "022 24452222"},
+                {"name": "Sri Venkateswara Institute of Medical Sciences (SVIMS)","phone": "0877 2287777"},
+                {"name": "Gauhati Medical College and Hospital","phone": "0361 2139220"},
+            ];
+            
+        });
+    </script>
+</body>

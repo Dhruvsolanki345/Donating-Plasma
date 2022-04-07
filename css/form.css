@@ -1,0 +1,88 @@
+.container {
+    padding: 16px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 700px;
+    border-radius: 2%;
+    box-shadow: 0 2px 5px gray;
+}
+
+input, textarea {
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+label{
+    padding-left: 4px;
+}
+textarea, input:not(input[type=checkbox]) {
+    display: inline-block;
+    width: 100%;
+}
+input:focus, textarea:focus {
+    background-color: #ccc;
+    outline: none;
+}
+.name {
+    display: inline-block;
+    width: 47%;
+}
+.name:first-of-type{
+    margin-right: 5%;
+}
+#telCode{
+    width: 10%;
+    text-align: center;
+}
+#tel{
+    width: 89%;
+}
+textarea{
+    resize: vertical;
+}
+.check{
+    padding-left: 2%;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.submitbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+.submitbtn:hover {
+    opacity: 1;
+}
+
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+@media (max-width: 600px){
+    .container{
+        margin-top: 70%;
+        width: 90%;
+        border-radius: 5px;
+    }
+    #tel-code, #tel, .name {
+        width: 100%;
+    }
+}

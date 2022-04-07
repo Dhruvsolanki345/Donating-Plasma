@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PlasmaBank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="web-name" href="index.html">D&#128151;nating Plasma</a></li>
+                <li><a id="home" class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="plasmaDonation.html">Plasma Donation</a></li>
+                <li><a class="nav-link" href="form.html">Registration Form</a></li>
+                <li><a class="active-page nav-link" href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form onreset="resetFun()" name="myform" action="#" onsubmit="return validateContact()">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <hr>
+            
+                <label for="name"><strong>Name</strong></label>
+                <input type="text" onchange="validateName()" autocomplete="off" placeholder="Enter name" name="name" id="name">
+                <span id="nameloc" style="color: red; margin-bottom: 10px;"></span><br>
+
+                <label for="email"><strong>Email</strong></label>
+                <input type="text" onblur="return validateEmail(document.myform)" placeholder="example@gmail.com" autocomplete="off" name="email" id="email">
+                <span id="emailloc" style="color: red; margin-bottom: 10px;"></span><br>
+
+                <label for="ques"><strong>Questions or Comments</strong></label>
+                <textarea name="ques" id="ques" cols="30" rows="5"></textarea>
+                <hr>
+                <button style="width: 50%;" type="submit" class="submitbtn">Send</button>
+                <button style="width: 48%; background-color: rgba(255, 0, 0, 0.8);" 
+                onmousedown="removeWarning()" type="reset" class="submitbtn">Reset</button>
+                <p id="demo"></p>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div id="footer">
+            <p>Project by Dhruv Solanki</p>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>

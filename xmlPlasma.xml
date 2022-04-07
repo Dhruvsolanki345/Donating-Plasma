@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="index.xsl" type="text/xsl" ?>
+<!-- 
+<?xml-stylesheet href="xml.css" type="text/css" ?> -->
+
+
+<centres>
+
+	<heading>Plasma Donation Center</heading>
+	
+    <centre>
+        <name>P.D. Hinduja Hospital</name>
+        <address>Veer Savarkar Marg, Mahim, Mumbai, Maharashtra 400016</address>
+        <phone>022 24452222</phone>
+    </centre>
+    <centre>
+        <name>Sri Venkateswara Institute of Medical Sciences (SVIMS)</name>
+        <address>Alipiri Road, Tirupati, Andhra Pradesh 517501</address>
+        <phone>0877 2287777</phone>
+    </centre>
+    <centre>
+        <name>Gauhati Medical College and Hospital</name>
+        <address>Bhangagarh, Guwahati, Assam 781032</address>
+        <phone>0361 2139220</phone>
+    </centre>
+    <centre>
+        <name>AIIMS Patna</name>
+        <address>Phulwarisharif, Patna, Bihar 801507</address>
+        <phone>0612 2451044</phone>
+    </centre>
+    <centre>
+        <name>Seven Hills Hospital, Mumbai</name>
+        <address>SevenHills Health City, Marol Maroshi Road, Andheri East, Mumbai, Maharashtra 400059</address>
+        <phone>022 67676767</phone>
+    </centre>
+    <centre>
+        <name>Sir J.J. Group of Hospitals</name>
+        <address>J.J. Marg, Nagpada, Mumbai Central, Near Sandhurst Road and J.J. Police Station, Mumbai, Maharashtra 400008</address>
+        <phone>022 23735555</phone>
+    </centre>
+    <centre>
+        <name>KEM Hospital</name>
+        <address>Acharya Donde Marg, Parel, Mumbai, Maharashtra	400012</address>
+        <phone>022 24107000</phone>
+    </centre>
+</centres>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PlasmaBank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body onload="greet()">
+    <header>
+        <nav>
+            <ul>
+                <li><a class="web-name" href="#">D&#128151;nating Plasma</a></li>
+                <li><a id="home" class="active-page nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="plasmaDonation.html">Plasma Donation</a></li>
+                <li><a class="nav-link" href="form.html">Registration Form</a></li>
+                <li><a class="nav-link" href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <div class="slideshow-container">
+
+                    <div style="display: block;" class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="img/image3.png" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="img/covid.png" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="img/image2.png" style="width:100%">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot active" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+            </section>
+        </article>
+        <div class="main-section">
+            <div class="info-div">
+                <article>
+                    <section>
+                        <p>The Plasma Protein Therapeutics Association (PPTA) and its member companies are closely monitoring the rapidly 
+                            changing information landscape regarding the spread of Novel Coronavirus 2019 (COVID-19) and wish to be a resource
+                            for patients, plasma donors, policymakers, and other stakeholders during this pandemic.</p>
+                        <p>Plasma donors save lives! Your donations are even more essential during the current COVID-19 pandemic to ensure 
+                            patients with rare diseases can keep receiving their lifesaving treatments. Authorities have published guidance 
+                            documents recognizing the essential nature of plasma donation.</p>
+                        <p>Patients all over the world rely on plasma protein therapies to treat rare, chronic diseases. 
+                            These individuals rely on the generosity and commitment of plasma donors. You may donate plasma in 
+                            one of more than 900 licensed and certified plasma collection centers located in the U.S. and Europe.</p>
+                    </section>
+                </article>
+            </div>
+            <div class="image-div">
+                <aside>
+                    <img width="300" height="250" src="img/right_view.png" alt="plasma save life">
+                    <div ondblclick="dblclickForm()" id="donate-div">
+                        <h3>Are you a recovered Covid-19 donor ?</h3>
+                        <div class="link">
+                            <a href="form.html">Donate now</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>   
+        </div>
+        <article>
+            <section>
+                <div id="bottom">
+                    <div onmouseover="bigDiv(this)" onmouseout="normalDiv(this)" class="card">
+                        <div class="title">
+                            <h3>Who?</h3>
+                        </div>
+                        <div class="body">
+                            <p>To become a qualified donor,donor must follow general rules:</p>
+                            <ul>
+                                <li>Plasma donors should be at least 18 years old</li>
+                                <li>Plasma donors should weigh at least 110 pounds or 50 kilograms</li>
+                                <li>Must pass a medical examination</li>
+                                <li>Complete an extensive medical history screening</li>
+                            </ul>
+                            <div class="link" >
+                                <a href="plasmaDonation.html">To know more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseover="bigDiv(this)" onmouseout="normalDiv(this)" class="card">
+                        <div class="title">
+                            <h3>How?</h3>
+                        </div>
+                        <div class="body">
+                            <p>Plasma donation process has four steps:</p>
+                            <ul>
+                                <li>A vein is cannulated in one arm. Your blood is collected in a machine using a sterile, disposable system.</li>
+                                <li>This machine separates the blood into cells and plasma</li>
+                                <li>The plasma is collected and stored</li>
+                                <li>The blood cells are returned to your body via the system</li>
+                            </ul>
+                            <div class="link" >
+                                <a href="plasmaDonation.html">To know more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseover="bigDiv(this)" onmouseout="normalDiv(this)" class="card">
+                        <div class="title">
+                            <h3>Why?</h3>
+                        </div>
+                        <div class="body">
+                            <p>Quite simply, plasma donors are needed because lives depend on plasma protein therapies. 
+                                Donating plasma is often called, "the gift of life."</br> Only a small number of people donate plasma.The plasma protein therapeutics industry supports donation in all of its forms,
+                                so that donors may contribute live-saving blood and source plasma to those in need.</p>
+                            <div class="link">
+                                <a href="plasmaDonation.html">To know more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseover="bigDiv(this)" onmouseout="normalDiv(this)" class="card">
+                        <div class="title">
+                            <h3>Where?</h3>
+                        </div>
+                        <div class="body">
+                            <p>Plasma is commonly given to trauma, burn and shock patients, as well as people with severe liver disease or 
+                               multiple clotting factor deficiencies. It helps boost the patient’s blood volume, which can prevent shock, 
+                               and helps with blood clotting. Pharmaceutical companies use plasma to make treatments for conditions such as 
+                               immune deficiencies and bleeding disorders.</p>
+                            <div class="link">
+                                <a href="plasmaDonation.html">To know more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div id="footer">
+            <p>Project by Dhruv Solanki</p>
+        </div>
+    </footer>
+    <script src="js/eventIndex.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>
